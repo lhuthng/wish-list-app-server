@@ -7,6 +7,10 @@ server.listen(port, () => {
   console.log(port);
 })
 
+app.get('/', (req, res, nxt) => {
+  res.send('hello');
+})
+
 // app.use(express.static(__dirname + '/build'));
 
 
