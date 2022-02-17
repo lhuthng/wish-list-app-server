@@ -1,16 +1,8 @@
 const express = require('express');
-const app = express();
-const server  = require('http').createServer(app);
-const port = process.env.port || 3000;
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
-server.listen(port, () => {
-  console.log(port);
-})
-
-app.get('/', (req, res, nxt) => {
-  res.send('hello');
-})
-
-// app.use(express.static(__dirname + '/build'));
-
-
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .get('/', (req, res) => res.send("<h1>Hello</h1>"))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
