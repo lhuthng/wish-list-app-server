@@ -1,0 +1,15 @@
+{
+  "name": "wish-list-app-server",
+  "version": "1.0.0",
+  "description": "Server for a wish list application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lhuthng",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodejs": "^0.0.0"
+  }
+}
